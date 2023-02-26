@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+<link rel="stylesheet" href="scheduler.css">
+<h1 >
+    <div style="display:flex;justify-content: center;align-items: center;">
+        <img src="./usclogo.png" alt="USC logo" style="width:100px;height:100px;">
+        <center>USC Class Schedule</center>
+    </div>
+</h1>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="topnav">
+  <a href="">Home Page</a>
+  <a href="https://classes.usc.edu/term-20232/">Summer 2023 Classes Offered</a>
+</div>
+
+<div class="footer">
+  <form method="GET" action="./result.html" onSubmit="return check();">
+          <label for="firstclass">Choose class ID for first class:</label><br>
+          <select id="first" name="first">
+            <option value="0">None</option>
+            <option value="1">CSCI102</option>
+            <option value="2">CSCI103</option>
+            <option value="3">CSCI104</option>
+            <option value="4">CSCI170</option>
+            <option value="5">MATH108</option>
+            <option value="6">MATH114</option>
+            <option value="7">MATH117</option>
+            <option value="8">MATH118</option>
+            <option value="9">MATH125</option>
+            <option value="10">MATH126</option>
+            <option value="11">MATH129</option>
+          </select><br>
+          <br>
+          <label for="secondclass">Choose class ID for second class:</label><br>
+          <select id="second" name="second">
+            <option value="0">None</option>
+            <option value="1">CSCI102</option>
+            <option value="2">CSCI103</option>
+            <option value="3">CSCI104</option>
+            <option value="4">CSCI170</option>
+            <option value="5">MATH108</option>
+            <option value="6">MATH114</option>
+            <option value="7">MATH117</option>
+            <option value="8">MATH118</option>
+            <option value="9">MATH125</option>
+            <option value="10">MATH126</option>
+            <option value="11">MATH129</option>
+          </select><br>
+          <br>
+          <label for="thirdclass">Choose class ID for third class:</label><br>
+          <select id="third" name="third">
+            <option value="0">None</option>
+            <option value="1">CSCI102</option>
+            <option value="2">CSCI103</option>
+            <option value="3">CSCI104</option>
+            <option value="4">CSCI170</option>
+            <option value="5">MATH108</option>
+            <option value="6">MATH114</option>
+            <option value="7">MATH117</option>
+            <option value="8">MATH118</option>
+            <option value="9">MATH125</option>
+            <option value="10">MATH126</option>
+            <option value="11">MATH129</option>
+          </select><br>
+          <br>
+          <label for="fourthclass">Choose class ID for fourth class:</label><br>
+          <select id="fourth" name="fourth">
+            <option value="0">None</option>
+            <option value="1">CSCI103</option>
+            <option value="2">CSCI104</option>
+            <option value="3">CSCI170</option>
+            <option value="4">MATH125</option>
+            <option value="5">MATH126</option>
+            <option value="6">MATH129</option>
+            <option value="7">MATH118</option>
+            <option value="8">MATH117</option>
+            <option value="9">MATH114</option>
+            <option value="10">MATH108</option>
+            <option value="11">CSCI102</option>
+          </select><br>
+          <br>
+          <label for="fifthclass">Choose class ID for fifth class:</label><br>
+          <select id="fifth" name="fifth">
+            <option value="0">None</option>
+            <option value="1">CSCI103</option>
+            <option value="2">CSCI104</option>
+            <option value="3">CSCI170</option>
+            <option value="4">MATH125</option>
+            <option value="5">MATH126</option>
+            <option value="6">MATH129</option>
+            <option value="7">MATH118</option>
+            <option value="8">MATH117</option>
+            <option value="9">MATH114</option>
+            <option value="10">MATH108</option>
+            <option value="11">CSCI102</option>
+          </select><br><br>
+          <input type="submit" value="Submit">
+          <input type="reset">
+          <br>
+        </form>
+  </div>
+
+<div id="root">
+</div>
+
+<script src="scheduler.js"></script>
+</body>
+</html>
+
