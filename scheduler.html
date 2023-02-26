@@ -1,7 +1,6 @@
-
 <html lang="en">
 <head>
-<link rel="stylesheet" href="test.css">
+<link rel="stylesheet" href="scheduler.css">
 <h1 >
     <div style="display:flex;justify-content: center;align-items: center;">
         <img src="file:///Users/reha/Downloads/usclogo.png" alt="USC logo" style="width:100px;height:100px;">
@@ -10,83 +9,102 @@
 </h1>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  margin: 5;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #830000;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Style the content */
-.content {
-  background-color: #ddd;
-  padding: 10px;
-  height: 200px; /* Should be removed. Only for demonstration */
-}
-
-/* Style the footer */
-.footer {
-  background-color: #f1f1f1;
-  padding: 10px;
-}
-</style>
 </head>
 <body>
 
 <div class="topnav">
   <a href="">Home Page</a>
   <a href="https://classes.usc.edu/term-20232/">Summer 2023 Classes Offered</a>
-  <a href="#">Customized Schedule</a>
 </div>
 
 <div class="content">
   <h2>Welcome to class registration for Summer 2023! </h2>
-  <h2>To create your customized schedule, enter the class names for the 4-5 classes you would like to sign up for. (ex. BISC 120, MATH 225, ITP 115)</h2>
+  <h2>To create your customized schedule, enter the class names for the 4-5 classes you would like to sign up for.</h2>
 </div>
 
 <div class="footer">
-<form action="/action_page.php">
-        <label for="firstclass">Enter class name for first class:</label><br>
-        <input type="text" id="firstclass" class="first"><br><br>
-        <label for="secondclass">Enter class name for second class:</label><br>
-        <input type="text" id="secondclass" class="second"><br><br>
-        <label for="thirdclass">Enter class name for third class:</label><br>
-        <input type="text" id="thirdclass" class="third"><br><br>
-        <label for="fourthclass">Enter class name for fourth class:</label><br>
-        <input type="text" id="fourthclass" class="fourth"><br><br>
-        <label for="fifthclass">Enter class name for fifth class:</label><br>
-        <input type="text" id="fifthclass" class="fifth"><br><br>
+<form action="./result.html" onsubmit="return check()">
+        <label for="firstclass">Choose class ID for first class:</label>
+        <select id="first" name="first">
+          <option value="0">None</option>
+          <option value="1">CSCI103</option>
+          <option value="2">CSCI104</option>
+          <option value="3">CSCI170</option>
+          <option value="4">MATH125</option>
+          <option value="5">MATH126</option>
+          <option value="6">MATH129</option>
+          <option value="7">MATH118</option>
+          <option value="8">MATH117</option>
+          <option value="9">MATH114</option>
+          <option value="10">MATH108</option>
+          <option value="11">CSCI102</option>
+        </select><br>
+        <label for="secondclass">Choose class ID for second class:</label>
+        <select id="second" name="second">
+          <option value="0">None</option>
+          <option value="1">CSCI103</option>
+          <option value="2">CSCI104</option>
+          <option value="3">CSCI170</option>
+          <option value="4">MATH125</option>
+          <option value="5">MATH126</option>
+          <option value="6">MATH129</option>
+          <option value="7">MATH118</option>
+          <option value="8">MATH117</option>
+          <option value="9">MATH114</option>
+          <option value="10">MATH108</option>
+          <option value="11">CSCI102</option>
+        </select><br>
+        <label for="thirdclass">Choose class ID for third class:</label>
+        <select id="third" name="third">
+          <option value="0">None</option>
+          <option value="1">CSCI103</option>
+          <option value="2">CSCI104</option>
+          <option value="3">CSCI170</option>
+          <option value="4">MATH125</option>
+          <option value="5">MATH126</option>
+          <option value="6">MATH129</option>
+          <option value="7">MATH118</option>
+          <option value="8">MATH117</option>
+          <option value="9">MATH114</option>
+          <option value="10">MATH108</option>
+          <option value="11">CSCI102</option>
+        </select><br>
+        <label for="fourthclass">Choose class ID for fourth class:</label>
+        <select id="fourth" name="fourth">
+          <option value="0">None</option>
+          <option value="1">CSCI103</option>
+          <option value="2">CSCI104</option>
+          <option value="3">CSCI170</option>
+          <option value="4">MATH125</option>
+          <option value="5">MATH126</option>
+          <option value="6">MATH129</option>
+          <option value="7">MATH118</option>
+          <option value="8">MATH117</option>
+          <option value="9">MATH114</option>
+          <option value="10">MATH108</option>
+          <option value="11">CSCI102</option>
+        </select><br>
+        <label for="fifthclass">Choose class ID for fifth class:</label>
+        <select id="fifth" name="fifth">
+          <option value="0">None</option>
+          <option value="1">CSCI103</option>
+          <option value="2">CSCI104</option>
+          <option value="3">CSCI170</option>
+          <option value="4">MATH125</option>
+          <option value="5">MATH126</option>
+          <option value="6">MATH129</option>
+          <option value="7">MATH118</option>
+          <option value="8">MATH117</option>
+          <option value="9">MATH114</option>
+          <option value="10">MATH108</option>
+          <option value="11">CSCI102</option>
+        </select><br>
         <input type="submit" value="Submit">
     
         <input type="reset">
       </form>
 </div>
 
+<script src="scheduler.js"></script>
 </body>
 </html>
